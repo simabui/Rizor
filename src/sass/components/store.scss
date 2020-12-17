@@ -1,0 +1,46 @@
+.section-store {
+  background-color: $main-color;
+}
+
+.poster {
+  @include bg-image('../images/poster/poster.png');
+  width: 61%;
+  height: 680px;
+  margin-top: -80px;
+  position: relative;
+
+  @include md-block() {
+    background-image: url('../images/poster/poster@0,5x.png');
+    height: 580px;
+    margin-top: 0;
+  }
+
+  @include sm-block() {
+    background-image: url('../images/poster/poster@0,3x.png');
+    height: 380px;
+    width: 100%;
+    margin-top: 30px;
+  }
+  &:before {
+    content: '4.0 Rizor';
+    display: inline-block;
+    max-width: 560px;
+    font-size: 186px;
+    letter-spacing: -46px;
+    color: #fff;
+    font-family: 'Rubik Mono One';
+    text-align: right;
+    opacity: 0.5;
+    bottom: -30px;
+    left: 0;
+    position: absolute;
+
+    @include md-block() {
+      font-size: 166px;
+    }
+    @include sm-block() {
+      font-size: 136px;
+      left: -50%;
+    }
+  }
+}

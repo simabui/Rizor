@@ -1,0 +1,41 @@
+.section-advantage {
+  @include md-block() {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.highlight {
+  @include size(12);
+
+  &__title {
+    font-family: $roboto-font;
+    font-weight: 700;
+    font-size: 20px;
+    color: $main-color;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin: 50px 0 50px 110px;
+
+    @include md-block() {
+      margin: 30px 0;
+    }
+    @include sm-block() {
+      font-size: 16px;
+      text-align: center;
+      margin: 0 0 30px 0;
+    }
+  }
+}
+
+.design {
+  @include size(5);
+  @include size-md(6);
+  @include size-sm(12);
+  margin-left: 110px;
+
+  @include md-block() {
+    margin-left: 0px;
+  }
+}

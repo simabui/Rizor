@@ -1,0 +1,89 @@
+@mixin font-face($ff, $fs, $fw, $url) {
+  @font-face {
+    font-family: '#{$ff}';
+    font-style: $fs;
+    font-weight: $fw;
+    src: url('#{$url}.woff2') format('woff2'), url('#{$url}.woff') format('woff');
+  }
+}
+
+@mixin bg-image($path: '', $size: cover, $repeat: no-repeat, $pos: center) {
+  background-image: url($path);
+  // background-color: rgba(9, 9, 9, 0.9);
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $pos;
+}
+
+@mixin center-flex($type: 'all') {
+  display: flex;
+
+  @if $type== 'all' {
+    justify-content: center;
+    align-items: center;
+  } @else if $type== 'hor' {
+    justify-content: center;
+  } @else if $type== 'ver' {
+    align-items: center;
+  }
+}
+
+@mixin retina-image() {
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin xl-block() {
+  @media screen and (min-width: 1441px) {
+    @content;
+  }
+}
+
+@mixin lg-block() {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin md-block() {
+  @media screen and (max-width: 868px) {
+    @content;
+  }
+}
+
+@mixin sm-block() {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin row-flex() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin size($n) {
+  $val: 100% / 12 * $n;
+  width: #{calc(#{$val} - #{$offset})};
+}
+
+@mixin size-lg($n) {
+  $val: 100% / 12 * $n;
+  @include lg-block() {
+    width: #{calc(#{$val} - #{$offset})};
+  }
+}
+
+@mixin size-md($n) {
+  $val: 100% / 12 * $n;
+  @include md-block() {
+    width: #{calc(#{$val} - #{$offset})};
+  }
+}
+@mixin size-sm($n) {
+  $val: 100% / 12 * $n;
+  @include sm-block() {
+    width: #{calc(#{$val} - #{$offset})};
+  }
+}

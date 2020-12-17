@@ -1,0 +1,141 @@
+.content {
+  @include md-block() {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &__title {
+    font-family: $rubik-font;
+    letter-spacing: 3px;
+    font-size: 40px;
+
+    @include md-block() {
+      font-size: 30px;
+    }
+    @include sm-block() {
+      font-size: 25px;
+    }
+  }
+
+  &__desc {
+    &-bold {
+      font-weight: 700;
+    }
+  }
+  &__desc,
+  &__item {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 300;
+    font-family: $roboto-font;
+
+    @include sm-block() {
+      font-size: 16px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+
+    p {
+      flex-basis: 291px;
+      margin: 0 0 10px 0;
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 5px;
+      width: 30px;
+      background: #000;
+      margin-right: 10px;
+
+      @include md-block() {
+        height: 3px;
+      }
+    }
+  }
+  &-mt-lg {
+    margin-top: 80px;
+
+    @include lg-block() {
+      margin-top: 0;
+    }
+  }
+
+  &-advantages-pd-r {
+    padding-right: 30px;
+  }
+
+  &-pd-r {
+    padding-right: 50px;
+
+    @include md-block() {
+      padding-right: 10px;
+    }
+    @include sm-block() {
+      padding-right: 0;
+    }
+  }
+
+  &-wh {
+    color: #fff;
+    margin-top: 0;
+    letter-spacing: 2px;
+
+    &-title {
+      font-family: $roboto-font;
+      margin-bottom: 80px;
+
+      @include md-block() {
+        margin-bottom: 30px;
+      }
+    }
+
+    &-desc {
+      font-family: $roboto-font;
+    }
+  }
+
+  &__button {
+    margin-top: 100px;
+
+    @include md-block() {
+      margin-top: 50px;
+    }
+    @include sm-block() {
+      margin-top: 30px;
+    }
+
+    &-link {
+      width: 300px;
+      display: block;
+      font-family: $roboto-font;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $main-color;
+      padding: 20px 46px;
+      background-color: #fff;
+      border-radius: 25px;
+      filter: drop-shadow(0px 5px 2.5px rgba(0, 0, 1, 0.2));
+      transition: transform 0.2s linear;
+      text-align: center;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @include md-block() {
+        padding: 10px 36px;
+        font-size: 13px;
+        width: 250px;
+      }
+
+      @include sm-block() {
+        margin: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+'use strict';
+import './../sass/styles.scss';
+import './../images/logo.png';
+import './../images/play.png';
+import './../images/lines/arrow.png';
+import './../images/rizors/rizor-black.png';
+import './../images/rizors/rizor-yellow.png';
+import './../images/rizors/rizor-gray.png';
+import './../images/rizors/rizor-red.png';
+import './../images/rizors/rizor-blue.png';
+import './animate';
+import './video';
+import './nav';
+import './showRizors';

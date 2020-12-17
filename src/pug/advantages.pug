@@ -1,0 +1,50 @@
+.video.video-second.fl-l
+  .video__poster.video__poster-second
+  .video__player.video__player-center
+    span.play-button-container
+      img(src="./images/play.png" class='play-button' alt="player controller")
+  iframe(class="video-youtube" src='' frameborder="0" allowfullscreen width="100%" height="100%")
+.container  
+  .row
+    .highlight
+      span.highlight__title преимущества
+    .design
+      .content
+        h2.content__title.js-split#designTitle дизайн 
+        p.content__desc.content-advantages-pd-r#designDesc.
+          Внешний вид скутера дышит 
+          идеями футуризма:
+        ul.content__list
+          each n in ['плавные линии','подсветка светодиодными индикаторами','рельефные бамперы, оснащенные защитными панелями']
+            li.content__item.design-item
+              p=n
+    .options
+      .content.options__block
+        h2.content__title.js-split#optionsTitle цвет
+        p.content__desc#optionsDesc
+          | Модель представлена сразу
+          br
+          |  в нескольких цветах. 
+        .options__type
+          ul.options__colors
+            li
+              span(class='options__colors__list options__colors__list-white' data-id='yellow')
+            li
+              span(class='options__colors__list options__colors__list-blue' data-id='blue')
+            li
+              span(class='options__colors__list options__colors__list-red' data-id='red')
+            li
+              span(class='options__colors__list options__colors__list-gray' data-id='gray')
+            li
+              span(class='options__colors__list options__colors__list-black isActive' data-id='black')
+          ul.options__rizor-type
+            li(class='options__rizor-img' id='yellow')
+              img(src='./images/rizor-yellow.png' title="rizor")
+            li(class='options__rizor-img' id='blue')
+              img(src='./images/rizor-blue.png' title="rizor")
+            li(class='options__rizor-img' id='red')
+              img(src='./images/rizor-red.png' title="rizor")
+            li(class='options__rizor-img' id='gray')
+              img(src='./images/rizor-gray.png' title="rizor")
+            li(class='options__rizor-img isShown' id='black' )
+              img(src='./images/rizor-black.png' title="rizor")

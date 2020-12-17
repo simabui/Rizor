@@ -1,0 +1,30 @@
+.video.video-third.fl-r
+  .video__poster.video__poster-feature
+  .video__player.video__player-center.video__player-sm
+    span.play-button-container
+      img(src="./images/play.png" class='play-button' alt="player controller")
+  .video__player.video__player-left.video__player-bottom
+    span.play-button-text смотреть видео
+    span.play-button-container
+      img(src="./images/play.png" class='play-button' alt="player controller")
+  iframe(class="video-youtube" src='' frameborder="0" allowfullscreen width="100%" height="100%")
+.container.clearfix
+  .row
+    .content.content-mt-lg#content-feature
+      h2.content__title.js-split#featureTitle режимы 
+      p.content__desc.content-pd-r#featureDesc
+        | Помимо «умной» подсветки,
+        span.content__desc-bold  Hovertrax 4.0 
+        | снабжён двумя скоростными режимами. 
+      ul.content__list
+        each n in ['Один для продвинутых пользователей','Второй для новичков']
+          li.content__item.feature-item
+            p=n
+      .features
+        .features__speed#feature-1
+          p.features__speed-highlight#feature-speed
+            | 0
+          p.features__speed-desc Максимальная скорость
+        .features__speed#feature-2
+          p.features__speed-highlight#feature-speedTypes 0
+          p.features__speed-desc Скоростных режима

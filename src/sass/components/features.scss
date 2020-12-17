@@ -1,0 +1,50 @@
+.section-feature {
+  padding-bottom: 80px;
+}
+
+.features {
+  max-width: 400px;
+  @include row-flex();
+  justify-content: space-between;
+
+  &__speed {
+    @include size(6);
+
+    p {
+      margin: 0 0 10px 0;
+    }
+
+    &-highlight {
+      font-family: $rubik-font;
+      color: $main-color;
+      font-size: 60px;
+      font-weight: 700;
+
+      @include md-block() {
+        font-size: 40px !important;
+      }
+      @include sm-block() {
+        font-size: 37px !important;
+      }
+
+      &-sm {
+        font-size: 18px;
+
+        @include md-block() {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-desc {
+      font-family: $roboto-font;
+      font-weight: 300;
+      font-size: 18px;
+      color: #666666;
+
+      @include md-block() {
+        font-size: 14px;
+      }
+    }
+  }
+}

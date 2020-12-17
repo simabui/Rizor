@@ -1,0 +1,131 @@
+.options {
+  @include size(12);
+  @include size-md(6);
+  @include size-sm(12);
+  margin-top: -120px;
+
+  @include lg-block() {
+    margin-top: -50px;
+  }
+
+  @include md-block() {
+    margin-top: 0px;
+  }
+
+  &__block {
+    float: right;
+    position: relative;
+
+    @include md-block() {
+      float: none;
+      margin-left: 0px;
+      // margin-left: 60px;
+    }
+    @include sm-block() {
+      margin-left: 10px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      @include bg-image('../images/lines/line3.png');
+      width: 17px;
+      height: 288px;
+      position: absolute;
+      top: 20px;
+      left: -20px;
+    }
+  }
+
+  &__desc {
+    font-family: $roboto-font;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-right: 30px;
+  }
+
+  &__colors {
+    display: flex;
+    justify-content: space-around;
+
+    @include md-block() {
+      width: 250px;
+    }
+  }
+
+  &__colors__list {
+    display: block;
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    transition: transform 0.2s linear;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &-white {
+      background: #e2e737;
+    }
+    &-blue {
+      background: #00b6f0;
+    }
+    &-red {
+      background: #e23131;
+    }
+    &-gray {
+      background: #efeeee;
+    }
+    &-black {
+      background: #0c0c0c;
+    }
+  }
+
+  &__rizor-img {
+    margin-top: 34px;
+    display: none;
+    animation: slideEffect 1s;
+
+    img {
+      height: inherit;
+    }
+
+    @include md-block() {
+      height: 215px;
+    }
+  }
+}
+
+.isActive {
+  position: relative;
+  transform: scale(1.2);
+
+  &:before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 48px;
+    @include bg-image('../images/lines/line2.png');
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 120%);
+  }
+}
+.isShown {
+  display: block;
+}
+
+@keyframes slideEffect {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
